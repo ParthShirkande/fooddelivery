@@ -43,14 +43,17 @@ app.get("/",(req,res)=>{
     res.send("API WORKING")
 })
 
+import path from "path";
+
+// Serve static files from frontend
+app.use(express.static(path.join(process.cwd(), "frontend", "dist")));
+
+// SPA fallback: serve index.html for any unknown route
+app.get("*", (req, res) => {
+    res.sendFile(path.join(process.cwd(), "frontend", "dist", "index.html"));
+});
+
+
 app.listen(port,()=>{
     console.log(`Server Started on http://localhost:${port}` )
 })
-
-//mongodb+srv://parthshirkande96:<db_password>@cluster0.1bosf.mongodb.net/?
-
-//mongodb+srv://parthshirkande96:<db_password>@cluster0.1bosf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0 
-
-
-
-// mongodb+srv://parthshirkande96:<db_password>@cluster0.1bosf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
