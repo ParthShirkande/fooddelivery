@@ -14,7 +14,7 @@ const FoodDisplay = ({category}) => {
         {food_list.map((item)=>{
           if (category==="All" || category===item.category) {
             console.log("Food Item:", item); 
-            return <FoodItem key={item._id} image={import.meta.env.BASE_URL + image} name={item.name} desc={item.description} price={item.price} id={item._id}/>
+            return <FoodItem key={item._id} image={import.meta.env.BASE_URL + item.image} name={item.name} desc={item.description} price={item.price} id={item._id}/>
           }
         })}
       </div>
