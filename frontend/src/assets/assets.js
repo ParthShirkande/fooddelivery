@@ -282,14 +282,14 @@ export const food_list = [
         _id: "200",
         name: "Mix Veg Pulao",
         image: food_23,
-        price: 10,
+        price: 150,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Pure Veg"
     }, {
         _id: "240",
         name: "Rice Zucchini",
         image: food_24,
-        price: 12,
+        price: 140,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Pure Veg"
     },
@@ -297,7 +297,7 @@ export const food_list = [
         _id: "180",
         name: "Cheese Pasta",
         image: food_25,
-        price: 12,
+        price: 120,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Pasta"
     },
@@ -347,7 +347,7 @@ export const food_list = [
         _id: "250",
         name: "Cooked Noodles",
         image: food_32,
-        price: 15,
+        price: 150,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Noodles"
     }
