@@ -19,7 +19,10 @@ const port = 4000
 app.use(express.json())
 
 //can access backend from any frontend
-app.use(cors())
+app.use(cors({
+  origin: "https://fooddelivery-fd.onrender.com", 
+  credentials: true
+}));
 
 
 //db connections
