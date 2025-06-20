@@ -3,7 +3,7 @@ import fs from 'fs'
 
 // all food list
 const listFood = async (req, res) => {
-    try {
+    try { 
         const foods = await foodModel.find({})
         res.json({ success: true, data: foods })
     } catch (error) {

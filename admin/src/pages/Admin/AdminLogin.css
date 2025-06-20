@@ -1,0 +1,28 @@
+.admin-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f7f7f7;
+}
+.admin-login-form {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.admin-login-form input {
+  padding: 10px;
+  font-size: 16px;
+}
+.admin-login-form button {
+  padding: 10px;
+  background-color: #ff4c24;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}

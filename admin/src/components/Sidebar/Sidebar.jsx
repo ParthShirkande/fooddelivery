@@ -8,7 +8,7 @@ const Sidebar = () => {
     <div className='sidebar'>
       <div className="sidebar-options">
         <NavLink to='/add' className="sidebar-option">
-            <img src={assets.add_icon} alt="" />
+            <img src={assets.add_icon} alt="sidebar" />
             <p>Add Items</p>
         </NavLink>
         <NavLink to='/list' className="sidebar-option">
@@ -19,6 +19,13 @@ const Sidebar = () => {
             <img src={assets.order_icon} alt="" />
             <p>Orders</p>
         </NavLink>
+        <NavLink to='/admin-login' className="sidebar-option">
+            <button onClick={() => {
+            localStorage.removeItem('adminToken');
+            }}>Logout</button>
+
+        </NavLink>
+        
       </div>
     </div>
   )
