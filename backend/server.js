@@ -20,7 +20,7 @@ app.use(express.json())
 
 //can access backend from any frontend
 app.use(cors({
-  origin: "https://fooddelivery-fd.onrender.com", 
+  origin: ['http://localhost:5174', 'https://fooddelivery-fd.onrender.com'],
   credentials: true
 }));
 
