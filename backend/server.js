@@ -20,7 +20,7 @@ app.use(express.json())
 
 //can access backend from any frontend
 app.use(cors({
-  origin: ['https://fooddelivery-g8cc.onrender.com/', 'https://fooddelivery-fd.onrender.com'],
+  origin: ['https://fooddelivery-g8cc.onrender.com', 'https://fooddelivery-fd.onrender.com'],
   credentials: true
 }));
 
