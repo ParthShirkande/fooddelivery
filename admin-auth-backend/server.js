@@ -12,7 +12,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://fooddelivery-g8cc.onrender.com', // your frontend URL
+  credentials: true
+}));
 app.use(express.json());
 app.use('/uploads', express.static('uploads')); // to serve images
 
