@@ -137,7 +137,7 @@ const url = import.meta.env.VITE_BACKEND_URL;
                 totalAmount += itemInfo.price * cartItems[item];
             }  
             } catch (error) {
-                
+                 
             }
             
         }

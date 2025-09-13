@@ -31,6 +31,10 @@ const Navbar = ({ setShowLogin }) => {
           <img src={assets.basket_icon} alt="" />
           <div className={getTotalCartAmount() > 0 ? "dot" : ""}></div>
         </Link>
+        <a href="https://fooddelivery-g8cc.onrender.com/" target="_blank" rel="noopener noreferrer">
+  <button className="admin-btn">Admin Panel</button>
+</a>
+
         {!token ? <button onClick={() => setShowLogin(true)}>sign in</button>
           : <div className='navbar-profile'>
             <img src={assets.profile_icon} alt="" />
