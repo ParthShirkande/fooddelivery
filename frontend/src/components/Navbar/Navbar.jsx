@@ -26,27 +26,39 @@ const Navbar = ({ setShowLogin }) => {
         <a href='#footer' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>contact us</a>
       </ul>
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
-        <Link to='/cart' className='navbar-search-icon'>
-          <img src={assets.basket_icon} alt="" />
-          <div className={getTotalCartAmount() > 0 ? "dot" : ""}></div>
-        </Link>
-        <a href="https://fooddelivery-g8cc.onrender.com/" target="_blank" rel="noopener noreferrer">
-  <button className="admin-btn">Admin Panel</button>
-</a>
+  <img src={assets.search_icon} alt="" />
+  <Link to='/cart' className='navbar-search-icon'>
+    <img src={assets.basket_icon} alt="" />
+    <div className={getTotalCartAmount() > 0 ? "dot" : ""}></div>
+  </Link>
 
-        {!token ? <button onClick={() => setShowLogin(true)}>sign in</button>
-          : <div className='navbar-profile'>
-            <img src={assets.profile_icon} alt="" />
-            <ul className='navbar-profile-dropdown'>
-              <li onClick={()=>navigate('/myorders')}> <img src={assets.bag_icon} alt="" /> <p>Orders</p></li>
-              <hr />
-              <li onClick={logout}> <img src={assets.logout_icon} alt="" /> <p>Logout</p></li> 
-            </ul>
-          </div>
-        }
+  {!token ? (
+    <>
+      <button 
+        onClick={() => window.location.href = "https://fooddelivery-g8cc.onrender.com/"} 
+        className="admin-btn"
+      >
+        Admin Panel
+      </button>
 
-      </div>
+      <button onClick={() => setShowLogin(true)}>sign in</button>
+    </>
+  ) : (
+    <div className='navbar-profile'>
+      <img src={assets.profile_icon} alt="" />
+      <ul className='navbar-profile-dropdown'>
+        <li onClick={() => navigate('/myorders')}>
+          <img src={assets.bag_icon} alt="" /> <p>Orders</p>
+        </li>
+        <hr />
+        <li onClick={logout}>
+          <img src={assets.logout_icon} alt="" /> <p>Logout</p>
+        </li>
+      </ul>
+    </div>
+  )}
+</div>
+
     </div>
   )
 }
